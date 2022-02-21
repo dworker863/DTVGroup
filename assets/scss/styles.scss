@@ -1,3 +1,6 @@
+@import 'fonts';
+@import 'vars';
+
 * {
   box-sizing: border-box;
 }
@@ -14,6 +17,11 @@ body {
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .header {
   overflow: hidden;
   position: relative;
@@ -21,6 +29,15 @@ body {
   width: 100%;
   color: #fff;
   background-color: #191919;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1500px;
 }
 
 .bg-particles {
@@ -41,13 +58,41 @@ body {
   top: 110%;
 }
 
-.container {
-  position: relative;
+.top-line {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
+  justify-content: flex-start;
+  padding: 40px 285px;
+}
+
+.logo-wrapper {
+  margin-right: 155px;
+}
+
+.nav {
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 1500px;
+  font-family: 'JetBrains Mono', sans-serif;
+  font-size: 18px;
+}
+
+.nav-item:hover a {
+  color: $color-primary;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(left, #8baebb, #f1a1a1);
+  background: -o-linear-gradient(right, #8baebb, #f1a1a1);
+  background: -moz-linear-gradient(right, #8baebb, #f1a1a1);
+  background: linear-gradient(to right, #8baebb, #f1a1a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .info-wrapper {
@@ -59,3 +104,5 @@ body {
 .info-desc {
   text-align: center;
 }
+
+@import 'media';
