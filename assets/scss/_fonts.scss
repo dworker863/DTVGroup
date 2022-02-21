@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'JetBrainsMono';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    /* Modern Browsers */
+      url('../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf')
+      format('truetype'),
+    /* Modern Browsers */
+      url('../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    /* Modern Browsers */
+      url('../fonts/Overpass/Overpass-VariableFont_wght.ttf') format('truetype'),
+    /* Modern Browsers */
+      url('../fonts/Overpass/Overpass-Italic-VariableFont_wght.ttf')
+      format('truetype');
+}
