@@ -59,15 +59,15 @@ a {
 
 .top-line {
   position: absolute;
+  display: flex;
+  justify-content: flex-start;
   top: 0;
   width: 100%;
   padding: 40px 285px;
 }
 
 .menu-desktop {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .menu-mobile {
