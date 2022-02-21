@@ -207,4 +207,63 @@ a {
   margin-bottom: 125px;
 }
 
+.about {
+  padding-top: 100px;
+  font-family: 'JetBrains Mono', sans-serif;
+}
+
+.container-about {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-desc {
+  padding: 130px 175px;
+}
+
+.text-pink {
+  font-style: italic;
+  background-color: $color-primary;
+}
+
+.about-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 315px;
+  font-family: 'JetBrains Mono', sans-serif;
+  font-weight: 700;
+  margin-bottom: 120px;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
+.about-item__photo {
+  min-width: 600px;
+  height: 600px;
+  background-color: #ffd34c;
+}
+
+.about-item__author {
+  margin-bottom: 20px;
+  font-family: Overpass, sans-serif;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.about-item__text {
+  margin-top: 0;
+  margin-bottom: 45px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.about-item__message {
+  font-style: italic;
+  font-weight: 300;
+  color: #696969;
+}
+
 @import 'media';
