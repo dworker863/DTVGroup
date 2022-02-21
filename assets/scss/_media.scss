@@ -1,1 +1,101 @@
+@media (max-width: 1600px) {
+  .container {
+    width: 1320px;
+  }
 
+  .top-line {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+
+  .info-wrapper {
+    top: 32%;
+    font-size: 20px;
+  }
+
+  .logo-wrapper {
+    margin-right: 80px;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  .bg-icons {
+    top: 54%;
+  }
+
+  .bg-iphone {
+    width: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 720px;
+  }
+
+  .bg-icons {
+    width: 720px;
+  }
+
+  .top-line {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .nav {
+    font-size: 16px;
+  }
+
+  .bg-iphone {
+    width: 300px;
+  }
+
+  .info-wrapper {
+    top: 38%;
+  }
+
+  .bg-icons {
+    top: 60%;
+  }
+
+  .hamburger-wrapper {
+    display: block;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 540px;
+  }
+
+  .bg-icons {
+    top: 63%;
+    width: 560px;
+  }
+
+  .logo-wrapper {
+    margin-right: 60px;
+
+    img {
+      width: 100px;
+    }
+  }
+}
