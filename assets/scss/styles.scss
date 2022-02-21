@@ -70,6 +70,49 @@ a {
   justify-content: flex-start;
 }
 
+.menu-mobile {
+  z-index: 2000;
+  position: absolute;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  padding-top: 100px;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+
+  &.active {
+    right: 0;
+  }
+}
+
+.logo-wrapper_mobile {
+  text-align: center;
+
+  img {
+    width: 150px;
+  }
+}
+
+.nav_mobile {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: 'JetBrains Mono', sans-serif;
+}
+
+.nav-item_mobile {
+  padding-bottom: 20px;
+  text-align: center;
+
+  a {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
 .logo-wrapper {
   margin-right: 155px;
 }
@@ -87,16 +130,6 @@ a {
 
 .nav-item:hover a {
   color: $color-primary;
-}
-
-.text-gradient {
-  font-weight: bold;
-  background: -webkit-linear-gradient(left, #8baebb, #f1a1a1);
-  background: -o-linear-gradient(right, #8baebb, #f1a1a1);
-  background: -moz-linear-gradient(right, #8baebb, #f1a1a1);
-  background: linear-gradient(to right, #8baebb, #f1a1a1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .hamburger-wrapper {
@@ -119,7 +152,7 @@ a {
 }
 
 .hamburger {
-  z-index: 100;
+  z-index: 3000;
   position: absolute;
   top: 50px;
   right: 50px;
@@ -149,6 +182,16 @@ a {
     top: 10px;
     left: 0;
   }
+}
+
+.text-gradient {
+  font-weight: bold;
+  background: -webkit-linear-gradient(left, #8baebb, #f1a1a1);
+  background: -o-linear-gradient(right, #8baebb, #f1a1a1);
+  background: -moz-linear-gradient(right, #8baebb, #f1a1a1);
+  background: linear-gradient(to right, #8baebb, #f1a1a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .info-wrapper {
