@@ -7,11 +7,19 @@
     padding-left: 150px;
     padding-right: 150px;
   }
+
+  .bg-icons {
+    bottom: 12%;
+  }
 }
 
 @media (max-width: 1400px) {
   .container {
     width: 1140px;
+  }
+
+  .bg-icons {
+    bottom: 17%;
   }
 }
 
@@ -21,7 +29,6 @@
   }
 
   .info-wrapper {
-    top: 32%;
     font-size: 20px;
   }
 
@@ -34,7 +41,7 @@
   }
 
   .bg-icons {
-    top: 54%;
+    bottom: 12%;
   }
 
   .bg-iphone {
@@ -45,6 +52,10 @@
 @media (max-width: 992px) {
   .container {
     width: 720px;
+  }
+
+  .header {
+    height: 100vh;
   }
 
   .bg-icons {
@@ -65,7 +76,7 @@
   }
 
   .info-wrapper {
-    top: 38%;
+    bottom: 0;
   }
 
   .bg-icons {
