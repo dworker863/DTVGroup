@@ -207,7 +207,7 @@ a {
   margin-bottom: 125px;
 }
 
-.about {
+section {
   padding-top: 100px;
   font-family: 'JetBrains Mono', sans-serif;
 }
@@ -228,6 +228,7 @@ a {
 
 .about-items {
   position: relative;
+  width: 100%;
   padding-top: 155px;
   padding-bottom: 155px;
 }
@@ -235,23 +236,27 @@ a {
 .about-item {
   display: flex;
   justify-content: space-between;
-  gap: 315px;
+  margin-bottom: 120px;
+  width: 100%;
   font-family: 'JetBrains Mono', sans-serif;
   font-weight: 700;
-  margin-bottom: 120px;
 
   &:nth-child(odd) {
     flex-direction: row-reverse;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .about-item__desc {
-  min-width: 600px;
+  width: 500px;
 }
 
 .about-item__photo {
-  min-width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   background-color: #ffd34c;
 }
 
@@ -293,6 +298,36 @@ a {
   width: 2px;
   height: 100%;
   background-color: #222;
+}
+
+.about-carousel {
+  display: none;
+}
+
+.owl-carousel .owl-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 100px;
+  width: 200px;
+}
+
+.owl-carousel button.owl-dot {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $color-primary;
+
+  &.active {
+    background-color: #ede0e1;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .services {

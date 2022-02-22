@@ -15,4 +15,11 @@ $(window).on('load', function () {
       $('.menu-mobile').removeClass('active');
     }
   });
+
+  $('.about-carousel').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    dots: true,
+  });
 });

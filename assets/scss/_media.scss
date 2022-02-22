@@ -21,6 +21,10 @@
   .bg-icons {
     bottom: 17%;
   }
+
+  .dividingLine-block {
+    width: 500px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -47,6 +51,19 @@
   .bg-iphone {
     width: 350px;
   }
+
+  .about-item__photo {
+    width: 380px;
+    height: 380px;
+  }
+
+  .about-item__desc {
+    width: 380px;
+  }
+
+  .about-item__author {
+    font-size: 48px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -59,6 +76,7 @@
   }
 
   .bg-icons {
+    bottom: 10%;
     width: 720px;
   }
 
@@ -79,10 +97,6 @@
     bottom: 0;
   }
 
-  .bg-icons {
-    top: 60%;
-  }
-
   .hamburger-wrapper {
     display: block;
   }
@@ -94,20 +108,69 @@
   .menu-mobile {
     display: block;
   }
+
+  .section-desc {
+    padding: 50px 80px;
+    margin-bottom: 80px;
+  }
+
+  .about-items {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .dividingLine-block {
+    width: 320px;
+  }
+
+  .about-item {
+    align-items: center;
+  }
+
+  .about-item__photo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-item__desc {
+    width: 250px;
+  }
+
+  .about-item__author {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .about-item__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .about-item__message {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
+  section {
+    padding-top: 50px;
+  }
+
   .container {
     width: 540px;
   }
 
+  .info-desc {
+    font-size: 18px;
+  }
+
   .bg-icons {
-    top: 67%;
+    bottom: 10%;
     width: 560px;
   }
 
   .info-wrapper {
-    top: 42%;
+    bottom: 0;
   }
 
   .bg-iphone {
@@ -121,6 +184,15 @@
       width: 100px;
     }
   }
+
+  .about-item__author {
+    font-size: 20px;
+  }
+
+  .section-desc {
+    padding: 30px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -130,5 +202,43 @@
 
   .bg-icons {
     display: none;
+  }
+
+  .about-items {
+    display: none;
+  }
+
+  .section-title {
+    margin: 0 auto;
+  }
+
+  .section-icon {
+    text-align: center;
+  }
+
+  .section-desc {
+    margin-bottom: 40px;
+  }
+
+  .about-item {
+    flex-direction: column;
+
+    &:nth-child(odd) {
+      flex-direction: column;
+    }
+  }
+
+  .about-item__photo {
+    margin-bottom: 20px;
+  }
+
+  .about-carousel {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .info-desc {
+    font-size: 16px;
   }
 }
