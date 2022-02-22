@@ -60,3 +60,13 @@
       url('../fonts/Overpass/Overpass-Italic-VariableFont_wght.ttf')
       format('truetype');
 }
+
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    /* Modern Browsers */ url('../fonts/Jost/Jost-VariableFont_wght.ttf')
+      format('truetype');
+  /* Modern Browsers */
+}
