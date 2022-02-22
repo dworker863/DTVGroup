@@ -34,4 +34,11 @@ $(window).on('load', function () {
       },
     },
   });
+
+  $('.services-carousel').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    dots: true,
+  });
 });

@@ -417,8 +417,14 @@ section {
 }
 
 .services-title {
-  color: #fff;
   margin-bottom: 170px;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #81c1d9, #aba3db);
+  background: -o-linear-gradient(right, #81c1d9, #aba3db);
+  background: -moz-linear-gradient(right, #81c1d9, #aba3db);
+  background: linear-gradient(to right, #81c1d9, #aba3db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container-services {
