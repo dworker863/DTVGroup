@@ -230,6 +230,10 @@ section {
   font-size: 24px;
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
 .text-pink {
   font-style: italic;
   background-color: $color-primary;
@@ -383,6 +387,20 @@ section {
   }
 
   &:nth-child(8) {
+    background-color: #c1bfd9;
+  }
+}
+
+.work-process__carousel.owl-carousel.owl-drag .owl-item {
+  &:nth-child(10) .work-process__card {
+    background-color: #eeeff8;
+  }
+
+  &:nth-child(11) .work-process__card {
+    background-color: #dcdcef;
+  }
+
+  &:nth-child(12) .work-process__card {
     background-color: #c1bfd9;
   }
 }
