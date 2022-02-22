@@ -22,4 +22,16 @@ $(window).on('load', function () {
     loop: true,
     dots: true,
   });
+
+  $('.work-process__carousel').owlCarousel({
+    items: 1,
+    margin: 40,
+    loop: true,
+    dots: true,
+    responsive: {
+      768: {
+        items: 2,
+      },
+    },
+  });
 });

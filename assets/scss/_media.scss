@@ -199,6 +199,19 @@
   .about__partners img {
     width: 600px;
   }
+
+  .no-js .work-process__carousel.owl-carousel,
+  .work-process__carousel.owl-carousel.owl-loaded {
+    display: block;
+  }
+
+  .work-process__cards {
+    display: none;
+  }
+
+  .work-process__card {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
