@@ -219,6 +219,7 @@ section {
 
 .section-desc {
   padding: 130px 175px;
+  font-size: 24px;
 }
 
 .text-pink {
@@ -271,7 +272,7 @@ section {
 .about-item__text {
   margin-top: 0;
   margin-bottom: 45px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -340,6 +341,11 @@ section {
 
 .services {
   height: 100vh;
+}
+
+.container-work {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @import 'media';
