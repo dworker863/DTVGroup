@@ -300,7 +300,8 @@ section {
   background-color: #222;
 }
 
-.about-carousel {
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
   display: none;
 }
 
@@ -328,6 +329,13 @@ section {
   &:last-child {
     margin-right: 0;
   }
+}
+
+.about__partners {
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
 }
 
 .services {
