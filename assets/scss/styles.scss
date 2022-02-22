@@ -363,7 +363,8 @@ section {
   padding-left: 100px;
   padding-right: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 2%;
   flex-wrap: wrap;
   color: #070707;
 }

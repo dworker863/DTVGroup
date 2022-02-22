@@ -15,6 +15,10 @@
   .about__partners img {
     width: 1150px;
   }
+
+  .work-process__cards {
+    gap: 9%;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -36,6 +40,10 @@
 
   .about__partners img {
     width: 1000px;
+  }
+
+  .work-process__cards {
+    gap: 2%;
   }
 }
 
@@ -88,6 +96,10 @@
     img {
       width: 800px;
     }
+  }
+
+  .work-process__cards {
+    justify-content: space-between;
   }
 }
 
