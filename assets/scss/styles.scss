@@ -217,6 +217,13 @@ section {
   align-items: flex-start;
 }
 
+.section-title h2 {
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
 .section-desc {
   padding: 130px 175px;
   font-size: 24px;
@@ -343,9 +350,65 @@ section {
   height: 100vh;
 }
 
+.work-process {
+  background-color: $pink-light;
+}
+
 .container-work {
   flex-direction: column;
   align-items: flex-start;
+}
+
+.work-process__cards {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #070707;
+}
+
+.work-process__card {
+  width: 300px;
+  margin-bottom: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #fff;
+
+  &:nth-child(6) {
+    background-color: #eeeff8;
+  }
+
+  &:nth-child(7) {
+    background-color: #dcdcef;
+  }
+
+  &:nth-child(8) {
+    background-color: #c1bfd9;
+  }
+}
+
+.card__number {
+  height: 200px;
+  font-size: 64px;
+  font-weight: 900;
+
+  h3 {
+    margin: 0;
+    line-height: 60px;
+  }
+}
+
+.card__desc {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.card__duration {
+  color: $font-grey;
+  margin-bottom: 90px;
+  line-height: 18px;
 }
 
 @import 'media';

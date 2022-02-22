@@ -12,6 +12,32 @@
 }
 
 @font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+    /* Modern Browsers */
+      url('../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf')
+      format('truetype'),
+    /* Modern Browsers */
+      url('../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 800;
+  src: local(''),
+    /* Modern Browsers */
+      url('../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf')
+      format('truetype'),
+    /* Modern Browsers */
+      url('../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf')
+      format('truetype');
+}
+
+@font-face {
   font-family: 'Overpass';
   font-style: normal;
   font-weight: 400;
