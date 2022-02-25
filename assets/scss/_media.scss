@@ -151,11 +151,11 @@
 
   .bg-icons1 {
     left: 50px;
-    bottom: 22%;
+    bottom: 14%;
   }
 
   .bg-icons2 {
-    bottom: 14%;
+    bottom: 10%;
   }
 
   .nav {
@@ -283,6 +283,10 @@
     padding-top: 50px;
   }
 
+  .header {
+    height: 50vh;
+  }
+
   .container {
     width: 540px;
   }
@@ -293,15 +297,19 @@
 
   .bg-icons1 {
     left: 20px;
-    bottom: 20%;
+    bottom: 12%;
   }
 
   .bg-icons2 {
-    bottom: 14%;
+    bottom: 8%;
   }
 
   .info-wrapper {
     bottom: 0;
+  }
+
+  .info-desc {
+    margin-bottom: 100px;
   }
 
   .bg-iphone {
@@ -331,6 +339,13 @@
 
   .about__partners img {
     width: 450px;
+  }
+
+  .bg-hand {
+    &.active {
+      bottom: 0;
+      transform: translate(0, -100%);
+    }
   }
 }
 
