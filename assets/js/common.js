@@ -77,4 +77,20 @@ $(window).on('load', function () {
     .setClassToggle('.work-process .section-desc', 'active')
     .addIndicators()
     .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#work-process',
+    offset: $('.work-process .section-desc').height() * 2.5,
+  })
+    .setClassToggle('.work-process__card', 'active')
+    .addIndicators()
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#services',
+    // offset: $('.work-process .section-desc').height() * 2.5,
+  })
+    .setClassToggle('.bg-hand', 'active')
+    .addIndicators()
+    .addTo(controller);
 });

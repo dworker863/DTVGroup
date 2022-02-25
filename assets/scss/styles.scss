@@ -1,5 +1,6 @@
 @import 'fonts';
 @import 'vars';
+// @import '../libs/animate.css/animate.min.css';
 
 * {
   box-sizing: border-box;
@@ -481,23 +482,64 @@ section {
   color: #070707;
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .work-process__card {
+  opacity: 0;
   width: 300px;
   height: 450px;
   margin-bottom: 35px;
   padding-left: 15px;
   padding-right: 15px;
   background-color: #fff;
+  transition: all 1.5s;
+
+  &.active {
+    opacity: 1;
+    animation: fadeInRight;
+    animation-duration: 2s;
+  }
+
+  &:nth-child(2).active {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3).active {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(4).active {
+    animation-delay: 0.6s;
+  }
+
+  &:nth-child(5).active {
+    animation-delay: 0.8s;
+  }
 
   &:nth-child(6) {
     background-color: #eeeff8;
+    animation-delay: 1s;
   }
 
   &:nth-child(7) {
     background-color: #dcdcef;
+    animation-delay: 1.2s;
   }
 
   &:nth-child(8) {
+    animation-delay: 1.4s;
     background-color: #c1bfd9;
   }
 }
@@ -640,10 +682,22 @@ section {
   color: #000;
 }
 
-.bg-hands {
+.bg-hand {
   position: absolute;
-  bottom: -10px;
-  width: 100%;
+  transition: all 3s;
+
+  &.active {
+    transform: translate(0, 425%);
+  }
+}
+
+.bg-hand-left {
+  transform: translate(-80%, 0);
+}
+
+.bg-hand-right {
+  transform: translate(80%, 0);
+  right: 0;
 }
 
 .footer {
