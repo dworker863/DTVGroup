@@ -41,4 +41,40 @@ $(window).on('load', function () {
     loop: true,
     dots: true,
   });
+
+  const controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.3,
+    },
+  });
+
+  new ScrollMagic.Scene({
+    triggerElement: '#about',
+    offset: $('.about .section-desc').height() * 2.5,
+  })
+    .setClassToggle('.about-item__desc', 'active')
+    .addIndicators()
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#about',
+    offset: $('.about .section-desc').height() * 2.5,
+  })
+    .setClassToggle('.about-item__photo', 'active')
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#about',
+  })
+    .setClassToggle('.about .section-desc', 'active')
+    .addIndicators()
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '#work-process',
+    offset: 200,
+  })
+    .setClassToggle('.work-process .section-desc', 'active')
+    .addIndicators()
+    .addTo(controller);
 });
