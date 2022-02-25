@@ -61,6 +61,8 @@ function build(done) {
 
   gulp.src('assets/fonts/**').pipe(gulp.dest('dist/fonts'));
 
+  gulp.src('assets/libs/**').pipe(gulp.dest('dist/libs'));
+
   gulp.src('assets/images/**').pipe(gulp.dest('dist/images'));
 
   done();

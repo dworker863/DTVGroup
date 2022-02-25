@@ -13,10 +13,9 @@
     <header class="header">
       <div class="menu-mobile">
         <nav class="nav_mobile">
-          <div class="nav-item_mobile"><a href="#">КТО</a></div>
-          <div class="nav-item_mobile"><a href="#">ЧТО</a></div>
-          <div class="nav-item_mobile"><a href="#">КАК</a></div>
-          <div class="nav-item_mobile"><a href="#">КОГДА И ГДЕ</a></div>
+          <div class="nav-item_mobile"><a href="#">О нас</a></div>
+          <div class="nav-item_mobile"><a href="#">Рабочий процесс</a></div>
+          <div class="nav-item_mobile"><a href="#">Услуги</a></div>
           <div class="nav-item_mobile">
             <a class="text-gradient" "href="#">ОСТАВИТЬ ЗАЯВКУ</a>
           </div>
@@ -25,16 +24,16 @@
       <div class="top-line">
         <div class="logo-wrapper">
           <img src="images/logo.webp" alt="DTVGroup" />
-        </div>
+        </div>        
         <div class="menu-desktop">
           <nav class="nav">
-            <div class="nav-item"><a href="">КТО</a></div>
-            <div class="nav-item"><a href="">ЧТО</a></div>
-            <div class="nav-item"><a href="">КАК</a></div>
-            <div class="nav-item"><a href="">КОГДА И ГДЕ</a></div>
+            <div class="nav-item"><a href="#">О нас</a></div>
+            <div class="nav-item"><a href="#">Рабочий процесс</a></div>
+            <div class="nav-item"><a href="#">Услуги</a></div>
             <div class="nav-item">
-              <a class="text-gradient" href="">ОСТАВИТЬ ЗАЯВКУ</a>
+              <a class="text-gradient" href="">ОСТАВИТЬ ЗАЯВКУ</a>              
             </div>
+            <div class="nav-item nav-item__tel">+7 777 777 77 77</div>
           </nav>
         </div>
         <div class="hamburger-wrapper">
@@ -44,30 +43,35 @@
       <img class="bg-particles" src="images/particles.webp" alt="Частица" />
       <div class="container container-header">
         <img
-          src="images/bg-icons.webp"
+          src="images/bg-icons1.webp"
           alt="Иконки соц. сетей"
-          class="bg-icons"
+          class="bg-icons1"
+        />
+        <img
+          src="images/bg-icons2.webp"
+          alt="Иконки соц. сетей"
+          class="bg-icons2"
         />
         <div class="info-wrapper">
           <div class="info-desc">
             Первопроходцы в мире диджитал-рекламы.<br />
-            Более 4 лет опыта и больше 700 рекламнИконки соц. сетей кампаний
+            Более 4 лет опыта и больше 700 рекламных кампаний
           </div>
           <img class="bg-iphone" src="images/iphone.webp" alt="Айфон" />
         </div>
       </div>
     </header>
-    <section class="about">
+    <section id="about" class="about">
       <div class="container container-about">
         <div class="section-title">
           <h2>О Нас</h2>
           <div class="section-icon">
-            <img src="images/file-icon.png" alt="Файл">
+            <img src="images/file-icon.webp" alt="Файл">
           </div>
         </div>
         <div class="section-desc">
           <p>
-            Компания DTVGroup специализируется на увеличении продаж с помощью комплексных 
+            Компания <span class="text-bold">DTVGroup</span> специализируется на увеличении продаж с помощью комплексных 
             решений интернет-маркетинга. Мы помогаем бизнесу наших клиентов сталь прибыльным, 
             при помощи получения целевой трафик и конвертировать его в продажи. 
           </p>
@@ -220,12 +224,12 @@
       </div>
     </section>
 
-    <section class="work-process">
+    <section id="work-process" class="work-process">
       <div class="container container-work">
         <div class="section-title">
           <h2>Рабочий<br> процесс</h2>
           <div class="section-icon">
-            <img src="images/file-icon.png" alt="Файл">
+            <img src="images/file-icon.webp" alt="Файл">
           </div>
         </div>
         <div class="section-desc">
@@ -378,13 +382,14 @@
         </div>
       </div>
     </section>
-    <section class="services">
-      <img src="images/hands.webp" alt="Руки" class="bg-hands">
+    <section id="services" class="services">
+        <img src="images/hand-left.webp" alt="Руки" class="bg-hand bg-hand-left">
+        <img src="images/hand-right.webp" alt="Руки" class="bg-hand bg-hand-right">
       <div class="container container-services">
         <div class="section-title services-title">
           <h2>Наши<br> Услуги</h2>
           <div class="section-icon">
-            <img src="images/file-icon.png" alt="Файл">
+            <img src="images/file-blue-icon.webp" alt="Файл">
           </div>
         </div>
         <div class="services__goods">
@@ -493,6 +498,8 @@
     <footer class="footer"></footer>
     <script src="libs/jquery/dist/jquery.slim.min.js"></script>
     <script src="libs/owlCarousel/dist/owl.carousel.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script>
+    <script src="libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

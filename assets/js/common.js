@@ -53,7 +53,6 @@ $(window).on('load', function () {
     offset: $('.about .section-desc').height() * 2.5,
   })
     .setClassToggle('.about-item__desc', 'active')
-    .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -67,7 +66,6 @@ $(window).on('load', function () {
     triggerElement: '#about',
   })
     .setClassToggle('.about .section-desc', 'active')
-    .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -75,7 +73,6 @@ $(window).on('load', function () {
     offset: 200,
   })
     .setClassToggle('.work-process .section-desc', 'active')
-    .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -83,14 +80,11 @@ $(window).on('load', function () {
     offset: $('.work-process .section-desc').height() * 2.5,
   })
     .setClassToggle('.work-process__card', 'active')
-    .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
     triggerElement: '#services',
-    // offset: $('.work-process .section-desc').height() * 2.5,
   })
     .setClassToggle('.bg-hand', 'active')
-    .addIndicators()
     .addTo(controller);
 });
