@@ -47,11 +47,41 @@ a {
   top: 40%;
 }
 
-.bg-icons {
+@keyframes slideUp {
+  from {
+    transform: translateY(5px);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-5px);
+  }
+
+  to {
+    transform: translateY(5px);
+  }
+}
+
+.bg-icons1 {
+  z-index: 100;
+  position: absolute;
+  bottom: 14%;
+  width: 80%;
+  animation: slideDown 2s ease-in-out alternate infinite;
+}
+
+.bg-icons2 {
   z-index: 100;
   position: absolute;
   bottom: 6%;
-  width: 80%;
+  right: 10%;
+  width: 30%;
+  animation: slideUp 2s ease-in-out alternate infinite;
 }
 
 .bg-iphone {
@@ -59,6 +89,7 @@ a {
 }
 
 .top-line {
+  z-index: 3000;
   position: absolute;
   display: flex;
   justify-content: flex-start;
@@ -130,9 +161,45 @@ a {
   font-size: 18px;
 }
 
-.nav-item:hover a {
-  color: $color-primary;
+.nav-item {
+  position: relative;
+
+  a {
+    text-transform: uppercase;
+  }
+
+  &::after {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    transform: scale(0%);
+    transition: all 0.3s;
+  }
 }
+
+.nav-item:hover {
+  color: #000;
+
+  a {
+    color: #000;
+  }
+
+  &::after {
+    height: 100%;
+    transform: scale(120%);
+  }
+}
+
+// .nav-item__tel {
+//   margin-left: -12%;
+// }
 
 .hamburger-wrapper {
   display: none;
@@ -249,6 +316,7 @@ section {
 .about-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 120px;
   width: 100%;
   font-family: 'JetBrains Mono', sans-serif;
@@ -274,6 +342,7 @@ section {
 }
 
 .about-item__author {
+  margin-top: 0;
   margin-bottom: 20px;
   font-family: Overpass, sans-serif;
   text-transform: uppercase;
