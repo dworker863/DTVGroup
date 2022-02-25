@@ -1,11 +1,13 @@
-@media (max-width: 1600px) {
-  .container {
-    width: 1320px;
-  }
-
+@media (max-width: 1700px) {
   .top-line {
     padding-left: 150px;
     padding-right: 150px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+    width: 1320px;
   }
 
   .bg-icons1 {
@@ -38,6 +40,14 @@
     bottom: 14%;
   }
 
+  .logo-wrapper {
+    margin-right: 80px;
+
+    img {
+      width: 150px;
+    }
+  }
+
   .section-desc {
     padding: 100px 150px;
   }
@@ -68,14 +78,6 @@
     margin-bottom: 220px;
   }
 
-  .logo-wrapper {
-    margin-right: 80px;
-
-    img {
-      width: 150px;
-    }
-  }
-
   .bg-icons1 {
     bottom: 16%;
   }
@@ -86,6 +88,11 @@
 
   .bg-iphone {
     width: 350px;
+  }
+
+  .top-line {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .section-desc {
@@ -135,11 +142,6 @@
 
   .bg-icons2 {
     bottom: 14%;
-  }
-
-  .top-line {
-    padding-left: 40px;
-    padding-right: 40px;
   }
 
   .nav {
