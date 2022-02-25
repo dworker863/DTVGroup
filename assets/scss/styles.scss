@@ -581,10 +581,17 @@ section {
 }
 
 .services {
+  overflow: hidden;
   position: relative;
   padding-bottom: 130px;
   background-color: #000;
   color: #fff;
+}
+
+.hands-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
 .services-title {
