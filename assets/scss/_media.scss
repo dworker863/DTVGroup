@@ -8,7 +8,11 @@
     padding-right: 150px;
   }
 
-  .bg-icons {
+  .bg-icons1 {
+    bottom: 18%;
+  }
+
+  .bg-icons2 {
     bottom: 12%;
   }
 
@@ -26,8 +30,12 @@
     width: 1140px;
   }
 
-  .bg-icons {
-    bottom: 17%;
+  .bg-icons1 {
+    bottom: 22%;
+  }
+
+  .bg-icons2 {
+    bottom: 14%;
   }
 
   .section-desc {
@@ -68,8 +76,12 @@
     }
   }
 
-  .bg-icons {
-    bottom: 12%;
+  .bg-icons1 {
+    bottom: 16%;
+  }
+
+  .bg-icons2 {
+    bottom: 10%;
   }
 
   .bg-iphone {
@@ -116,9 +128,13 @@
     height: 100vh;
   }
 
-  .bg-icons {
-    bottom: 10%;
-    width: 720px;
+  .bg-icons1 {
+    left: 50px;
+    bottom: 22%;
+  }
+
+  .bg-icons2 {
+    bottom: 14%;
   }
 
   .top-line {
@@ -259,9 +275,13 @@
     font-size: 18px;
   }
 
-  .bg-icons {
-    bottom: 10%;
-    width: 560px;
+  .bg-icons1 {
+    left: 20px;
+    bottom: 20%;
+  }
+
+  .bg-icons2 {
+    bottom: 14%;
   }
 
   .info-wrapper {
@@ -303,7 +323,8 @@
     width: 100%;
   }
 
-  .bg-icons {
+  .bg-icons1,
+  .bg-icons2 {
     display: none;
   }
 
