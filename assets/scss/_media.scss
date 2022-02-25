@@ -25,6 +25,13 @@
   .work-process__cards {
     gap: 9%;
   }
+
+  .bg-hand {
+    &.active {
+      bottom: 0;
+      transform: translate(0, -10%);
+    }
+  }
 }
 
 @media (max-width: 1400px) {
@@ -123,6 +130,13 @@
 
   .work-process__cards {
     justify-content: space-between;
+  }
+
+  .bg-hand {
+    &.active {
+      bottom: 0;
+      transform: translate(0, -50%);
+    }
   }
 }
 
@@ -389,6 +403,10 @@
   .price {
     font-size: 48px;
     line-height: 48px;
+  }
+
+  .bg-hand {
+    display: none;
   }
 }
 

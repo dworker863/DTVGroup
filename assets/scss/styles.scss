@@ -695,35 +695,28 @@ section {
 }
 
 .bg-hand {
+  bottom: 100%;
   position: absolute;
+  width: 30%;
   transition: all 3s;
 
   &.active {
-    transform: translate(0, 425%);
+    bottom: 0;
+    transform: translate(0, 0);
   }
 }
 
 .bg-hand-left {
-  transform: translate(-80%, 0);
+  transform: translate(-80%, 100%);
 }
 
 .bg-hand-right {
-  transform: translate(80%, 0);
+  transform: translate(80%, 100%);
   right: 0;
 }
 
 .footer {
   height: 70vh;
-}
-
-.test {
-  width: 200px;
-  height: 200px;
-  background-color: #000;
-
-  &.active {
-    background-color: red;
-  }
 }
 
 @import 'media';
