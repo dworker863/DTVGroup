@@ -8,6 +8,7 @@
   },
   "author": "dworker",
   "license": "ISC",
+  "homepage": "https://dworker863.github.io/DTVGroup/",
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
