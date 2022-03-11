@@ -2,12 +2,19 @@
   .container {
     width: 1320px;
   }
+
   .bg-icons1 {
-    bottom: 18%;
+    bottom: 120px;
   }
+
   .bg-icons2 {
-    bottom: 12%;
+    bottom: 70px;
   }
+
+  .bg-iphone {
+    width: 400px;
+  }
+
   .about__partners img {
     width: 1150px;
   }
@@ -37,12 +44,19 @@
     width: 150px;
     margin-right: 80px;
   }
+
   .bg-icons1 {
-    bottom: 22%;
+    bottom: 110px;
   }
+
   .bg-icons2 {
-    bottom: 14%;
+    bottom: 60px;
   }
+
+  .bg-iphone {
+    width: 350px;
+  }
+
   .section-desc {
     padding: 100px 150px;
   }
@@ -78,20 +92,12 @@
     padding-left: 40px;
     padding-right: 40px;
   }
-  .bg-icons1 {
-    bottom: 16%;
-  }
-  .bg-icons2 {
-    bottom: 10%;
-  }
+
   .info-wrapper {
     font-size: 20px;
   }
-  .info-desc {
-    margin-bottom: 220px;
-  }
   .bg-iphone {
-    width: 350px;
+    width: 300px;
   }
   .section-desc {
     padding: 100px;
@@ -202,16 +208,14 @@
   }
   .bg-icons1 {
     left: 50px;
-    bottom: 14%;
+    bottom: 100px;
   }
   .bg-icons2 {
-    bottom: 10%;
+    bottom: 60px;
   }
-  .info-desc {
-    margin-bottom: 180px;
-  }
+
   .bg-iphone {
-    width: 300px;
+    width: 250px;
   }
   .section-number {
     top: 75px;
@@ -356,26 +360,25 @@
   .container {
     width: 540px;
   }
-  .header {
-    height: 50vh;
-  }
   .logo {
     width: 100px;
     margin-right: 60px;
   }
+
   .bg-icons1 {
-    left: 20px;
-    bottom: 12%;
+    width: 100%;
+    left: 0px;
+    bottom: 110px;
   }
   .bg-icons2 {
-    bottom: 8%;
+    width: 40%;
+    bottom: 70px;
+    left: 60%;
   }
   .info-desc {
     font-size: 18px;
-    margin-bottom: 100px;
   }
   .bg-iphone {
-    width: 250px;
   }
   .section-number {
     top: 55px;

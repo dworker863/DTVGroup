@@ -36,7 +36,7 @@ section {
 
 .header {
   position: relative;
-  height: 1080px;
+  height: 100vh;
   width: 100%;
   color: #fff;
   background-color: #191919;
@@ -77,20 +77,24 @@ section {
 }
 
 .bg-icons1 {
-  bottom: 14%;
+  bottom: 140px;
   width: 80%;
   animation: 2s ease-in-out infinite alternate slideDown;
 }
 
 .bg-icons2 {
-  bottom: 6%;
+  bottom: 80px;
   right: 10%;
   width: 30%;
   animation: 2s ease-in-out infinite alternate slideUp;
 }
 
 .bg-iphone {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
   width: 450px;
+  transform: translateX(-50%);
 }
 
 .top-line {
@@ -283,13 +287,9 @@ section {
 
 .info-wrapper {
   position: absolute;
-  bottom: -10px;
+  top: 30%;
   font-size: 24px;
   text-align: center;
-}
-
-.info-desc {
-  margin-bottom: 125px;
 }
 
 .container-section {
