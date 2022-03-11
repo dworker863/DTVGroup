@@ -3,12 +3,11 @@
   font-style: normal;
   font-weight: 400;
   src: local(''),
-    /* Modern Browsers */
-      url('../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf')
-      format('truetype'),
-    /* Modern Browsers */
-      url('../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf')
-      format('truetype');
+    url(../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.woff2)
+      format('woff2'),
+    url(../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.woff2)
+      format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -16,12 +15,11 @@
   font-style: normal;
   font-weight: 600;
   src: local(''),
-    /* Modern Browsers */
-      url('../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf')
-      format('truetype'),
-    /* Modern Browsers */
-      url('../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf')
-      format('truetype');
+    url(../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.woff2)
+      format('woff2'),
+    url(../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.woff2)
+      format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -29,44 +27,64 @@
   font-style: normal;
   font-weight: 800;
   src: local(''),
-    /* Modern Browsers */
-      url('../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf')
-      format('truetype'),
-    /* Modern Browsers */
-      url('../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf')
-      format('truetype');
+    url(../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.woff2)
+      format('woff2'),
+    url(../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.woff2)
+      format('woff2');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Overpass';
+  font-family: 'JetBrains Mono';
   font-style: normal;
   font-weight: 300;
   src: local(''),
-    /* Modern Browsers */
-      url('../fonts/Overpass/Overpass-VariableFont_wght.ttf') format('truetype'),
-    /* Modern Browsers */
-      url('../fonts/Overpass/Overpass-Italic-VariableFont_wght.ttf')
-      format('truetype');
+    url(../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.woff2)
+      format('woff2'),
+    url(../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.woff2)
+      format('woff2');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Overpass';
+  font-family: 'JetBrains Mono';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   src: local(''),
-    /* Modern Browsers */
-      url('../fonts/Overpass/Overpass-VariableFont_wght.ttf') format('truetype'),
-    /* Modern Browsers */
-      url('../fonts/Overpass/Overpass-Italic-VariableFont_wght.ttf')
-      format('truetype');
+    url(../fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.woff2)
+      format('woff2'),
+    url(../fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.woff2)
+      format('woff2');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Jost';
+  font-family: Overpass;
+  font-style: normal;
+  font-weight: 300;
+  src: local(''),
+    url(../fonts/Overpass/Overpass-VariableFont_wght.woff2) format('woff2'),
+    url(../fonts/Overpass/Overpass-Italic-VariableFont_wght.woff2)
+      format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Overpass;
   font-style: normal;
   font-weight: 400;
   src: local(''),
-    /* Modern Browsers */ url('../fonts/Jost/Jost-VariableFont_wght.ttf')
-      format('truetype');
-  /* Modern Browsers */
+    url(../fonts/Overpass/Overpass-VariableFont_wght.woff2) format('woff2'),
+    url(../fonts/Overpass/Overpass-Italic-VariableFont_wght.woff2)
+      format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Jost;
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url(../fonts/Jost/Jost-VariableFont_wght.woff2) format('woff2');
+  font-display: swap;
 }

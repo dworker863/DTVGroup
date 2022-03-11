@@ -22,10 +22,5 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.49.7"
-  },
-  "dependencies": {
-    "animate.css": "^4.1.1",
-    "jquery": "^3.6.0",
-    "scrollmagic": "^2.0.8"
   }
 }

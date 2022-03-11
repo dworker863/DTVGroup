@@ -18,10 +18,13 @@ function html() {
 
 function styles() {
   return gulp
-    .src(['./assets/scss/**/*.scss'])
+    .src([
+      './assets/libs/owlCarousel/dist/assets/owl.carousel.min.css',
+      './assets/scss/**/*.scss',
+    ])
     .pipe(sourcemaps.init())
     .pipe(sass())
-    .pipe(concat('styles.css'))
+    .pipe(concat('styles.min.css'))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/css'))
@@ -30,9 +33,14 @@ function styles() {
 
 function scripts() {
   return gulp
-    .src(['./assets/js/common.js'])
+    .src([
+      './assets/libs/jquery/dist/jquery.slim.min.js',
+      './assets/libs/owlCarousel/dist/owl.carousel.min.js',
+      './assets/libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+      './assets/js/common.js',
+    ])
     .pipe(sourcemaps.init())
-    .pipe(concat('scripts.js'))
+    .pipe(concat('scripts.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('assets/js'))
     .pipe(browserSync.stream());
@@ -55,9 +63,9 @@ function clear() {
 }
 
 function build(done) {
-  gulp.src('assets/css/styles.css').pipe(gulp.dest('dist/css'));
+  gulp.src('assets/css/styles.min.css').pipe(gulp.dest('dist/css'));
 
-  gulp.src('assets/js/scripts.js').pipe(gulp.dest('dist/js'));
+  gulp.src('assets/js/scripts.min.js').pipe(gulp.dest('dist/js'));
 
   gulp.src('assets/fonts/**').pipe(gulp.dest('dist/fonts'));
 
