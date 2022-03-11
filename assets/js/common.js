@@ -121,7 +121,6 @@ $(window).on('load', function () {
       height: t + 'px',
       left: r(0, 100) + '%',
       top: r(0, 100) + '%',
-      'box-shadow': '0 0 ' + t + 'px ' + t / 2 + 'px #043668',
       'animation-duration': r(i.min, i.max) + 's',
     }),
       $('#root').append(e);
