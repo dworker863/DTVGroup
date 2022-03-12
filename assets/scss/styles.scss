@@ -862,7 +862,6 @@ section {
   display: flex;
   justify-content: flex-start;
   gap: 15px;
-  width: 525px;
   padding-left: 15px;
 
   img {
@@ -873,8 +872,12 @@ section {
 .footer__socials {
   display: flex;
   justify-content: space-between;
-  width: 290px;
+  gap: 10px;
   padding-left: 15px;
+
+  img {
+    width: 86px;
+  }
 }
 
 .footer__copyrights {
