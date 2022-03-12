@@ -839,6 +839,7 @@ section {
 }
 
 .footer {
+  position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #000;
@@ -847,6 +848,7 @@ section {
 
 .container-footer {
   display: block;
+  padding-top: 40px;
 }
 
 .footer__title {
@@ -885,6 +887,22 @@ section {
 
   a {
     color: #969696;
+  }
+}
+
+.footer-topline {
+  position: absolute;
+  top: 0;
+  background-color: #000;
+
+  .nav {
+    margin-left: 80px;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .nav-item {
+    pointer-events: none;
   }
 }
 

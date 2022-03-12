@@ -171,6 +171,12 @@
     width: 100%;
     text-align: center;
   }
+
+  .footer-topline {
+    .nav {
+      margin-left: 0px;
+    }
+  }
   .projects-title {
     margin-top: -100px;
     padding-left: 0;
@@ -326,6 +332,24 @@
     padding-left: 0;
     text-align: center;
   }
+
+  .footer-topline {
+    .nav {
+      display: flex;
+      margin-left: 0px;
+      gap: 50px;
+    }
+
+    .container-top-line {
+      margin-left: auto;
+    }
+  }
+
+  .menu-footer {
+    display: block;
+    width: 100%;
+  }
+
   .project__item1-title,
   .project__item4-title {
     background-position: 30% 0;
@@ -534,6 +558,32 @@
   .feedback__tel {
     font-size: 24px;
   }
+
+  .footer-topline {
+    padding: 40px 0;
+
+    .nav {
+      font-size: 16px;
+      flex-wrap: wrap;
+      gap: 0px;
+    }
+
+    .nav-item {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+
+  .container-footer {
+    padding-top: 120px;
+  }
+
+  .menu-footer {
+    display: block;
+    width: 100%;
+  }
+
   .footer__sertificates img {
     width: 80px;
   }
