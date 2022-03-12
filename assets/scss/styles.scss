@@ -860,9 +860,14 @@ section {
 
 .footer__sertificates {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 15px;
   width: 525px;
   padding-left: 15px;
+
+  img {
+    width: 86px;
+  }
 }
 
 .footer__socials {
