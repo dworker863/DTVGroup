@@ -77,13 +77,13 @@ section {
 }
 
 .bg-icons1 {
-  bottom: 140px;
+  bottom: 80px;
   width: 80%;
   animation: 2s ease-in-out infinite alternate slideDown;
 }
 
 .bg-icons2 {
-  bottom: 80px;
+  bottom: 30px;
   right: 10%;
   width: 30%;
   animation: 2s ease-in-out infinite alternate slideUp;
@@ -93,7 +93,7 @@ section {
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 450px;
+  width: 400px;
   transform: translateX(-50%);
 }
 
