@@ -108,6 +108,7 @@ section {
 }
 
 .logo {
+  cursor: pointer;
   margin-right: 155px;
 }
 
@@ -932,19 +933,19 @@ section {
 }
 
 .project__item1-title {
-  background-image: url(../images/promusic_bg.webp);
+  background-image: url(../images/promusic_bg.jpg);
 }
 
 .project__item2-title {
-  background-image: url(../images/parimatch_bg.webp);
+  background-image: url(../images/parimatch_bg.jpg);
 }
 
 .project__item3-title {
-  background-image: url(../images/dvernoy-centr_bg.webp);
+  background-image: url(../images/dvernoy-centr_bg.jpg);
 }
 
 .project__item4-title {
-  background-image: url(../images/mir-pola_bg.webp);
+  background-image: url(../images/mir-pola_bg.jpg);
 }
 
 .container-projects-title {
@@ -975,6 +976,7 @@ section {
 }
 
 .projects__tagline {
+  text-transform: uppercase;
   font-size: 36px;
   font-weight: 200;
   color: #fff;
@@ -988,10 +990,6 @@ section {
 
 .projects__desc:last-child {
   padding-bottom: 0;
-}
-
-.projects__project {
-  margin-top: 60px;
 }
 
 .projects__item-title,

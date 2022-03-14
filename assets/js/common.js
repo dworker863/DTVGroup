@@ -32,6 +32,7 @@ $(window).on('load', function () {
       margin: 40,
       loop: !0,
       dots: !0,
+      equalHeight: true,
     });
   const e = new ScrollMagic.Controller({
     globalSceneOptions: {
