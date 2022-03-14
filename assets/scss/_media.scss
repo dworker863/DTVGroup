@@ -535,11 +535,11 @@
     display: none;
   }
   .services__good {
-    width: 300px;
+    width: 320px;
   }
-  .good__photo {
-    width: 300px;
-    height: 300px;
+  .owl-carousel .owl-item .good__photo {
+    width: 320px;
+    height: 320px;
     margin-bottom: 10px;
   }
   .price {
