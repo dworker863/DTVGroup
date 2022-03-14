@@ -510,7 +510,9 @@
   .about-item:nth-child(odd) {
     flex-direction: column;
   }
-  .about-item__photo {
+  .owl-carousel .owl-item .about-item__photo {
+    width: 320px;
+    height: 320px;
     margin-bottom: 20px;
   }
   .no-js .owl-carousel,
