@@ -396,7 +396,6 @@ section {
   opacity: 0;
   width: 500px;
   height: 500px;
-  background-color: #ffd34c;
   transform: translateX(-1000px);
   transition: 1s;
 }
@@ -897,7 +896,7 @@ section {
   background-color: #000;
 
   .nav {
-    margin-left: 80px;
+    // margin-left: 80px;
     justify-content: center;
     gap: 60px;
   }
