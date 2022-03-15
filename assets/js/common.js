@@ -83,8 +83,10 @@ $(window).on('load', function () {
       .setClassToggle('.work-process__card', 'active')
       .addTo(e),
     new ScrollMagic.Scene({
-      triggerElement: '#services',
+      triggerElement: '.services',
+      offset: -300,
     })
+      .addIndicators()
       .setClassToggle('.bg-hand', 'active')
       .addTo(e),
     $(window)
