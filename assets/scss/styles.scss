@@ -1074,4 +1074,12 @@ section {
   }
 }
 
+.owl-carousel .owl-stage {
+  display: flex;
+}
+
+.owl-carousel .owl-item > div {
+  height: 100%;
+}
+
 @import 'media';
