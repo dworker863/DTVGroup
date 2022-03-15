@@ -37,7 +37,6 @@ function scripts() {
       './assets/libs/jquery/dist/jquery.slim.min.js',
       './assets/libs/owlCarousel/dist/owl.carousel.min.js',
       './assets/libs/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
-      './assets/libs/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js',
       './assets/js/common.js',
     ])
     .pipe(sourcemaps.init())

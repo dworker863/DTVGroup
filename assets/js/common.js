@@ -86,7 +86,6 @@ $(window).on('load', function () {
       triggerElement: '.services',
       offset: -300,
     })
-      .addIndicators()
       .setClassToggle('.bg-hand', 'active')
       .addTo(e),
     $(window)
