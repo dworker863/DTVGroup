@@ -78,7 +78,7 @@ $(window).on('load', function () {
       .addTo(e),
     new ScrollMagic.Scene({
       triggerElement: '#work-process',
-      offset: $('.work-process .section-desc').height(),
+      offset: $('.work-process .section-desc').height() * 3,
     })
       .setClassToggle('.work-process__card', 'active')
       .addTo(e),
