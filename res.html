@@ -1,0 +1,563 @@
+{{no_layout}}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+<script src="{{files}}/js/jquery.min.js"></script>
+
+    <script>
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'Пожалуйста, исправьте следующие ошибки'; 
+
+        orderValidator.errorNameField = 'Имя'; 
+        orderValidator.errorNameMess = 'Укажите своё имя'; 
+        
+        orderValidator.errorPhoneField = 'Телефон для связи'; 
+        orderValidator.errorPhoneMess = 'Введите правильный телефон'; 
+        
+        orderValidator.errorAddress = 'Введите правильный адрес'; 
+        orderValidator.errorRequired = 'обязательное поле'; 
+        orderValidator.errorMaxLength = 'допустимо максимум {1} символа'; 
+        orderValidator.errorMinLength = 'допустимо минимум {1} символа'; 
+        orderValidator.errorEmailField = 'E-mail';
+        orderValidator.errorEmail = 'указан не корректный email';
+        }
+    </script>
+    
+<script>
+
+
+window.app = {
+    timestamp: parseInt((new Date()).getTime() / 1000),
+    jq: jQuery,
+    formAction: window.location.href,
+    leadToken: '62307ec026b064.42427285',
+    offers: {"25195":{"id":25195,"country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"price":"1990","price2":"3980","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""}},
+    currentOffer: {"id":25195,"country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"price":"1990","price2":"3980","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"discount":"","delivery_price":"","link":"","product_sku":"","prepaid_info_html":""},
+    allowedCountries: ["RU"],
+    _setOfferId: false,
+    streamHid: '',
+    showcaseUrl: '',
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },
+
+    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },
+
+    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }
+
+};
+
+
+</script><script src="{{files}}/js/form.validate.js"></script>
+<script src="{{files}}/js/interPhoneCodes.js"></script>
+<script src="{{files}}/js/showcase.js"></script>
+<script src="{{files}}/js/form.incomplete.js"></script>
+<script src="{{files}}/js/main2.js"></script>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=480">
+    <title>Fugicar FC8 - ультратонкое зеркало-бортовой компьютер + Камера заднего вида</title>
+    <meta name="description" content="Зеркало Fugicar FC8 — накладка на штатное зеркало заднего вида. Ведет запись в Full HD качестве с разрешением 1080 px. Картинка получается невероятно чёткая!">
+    <link rel="shortcut icon" href="{{files}}/img/favicon.png" type="image/png">
+    <!-- style -->
+    <link href="{{files}}/css/reset.css" rel="stylesheet">
+    <link href="{{files}}/css/Gilroy.css" rel="stylesheet">
+    <link href="{{files}}/css/style.css" rel="stylesheet">
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Fugicar FC8 зеркало-бортовой компьютер" />
+    <meta property="og:description" content="Функциональный видеорегистратор для записи происходящего на дороге. Обладает объединенной системой камеры и стандартного зеркала заднего вида. Аппарат выполняет не только функцию регистратора, но и небольшого мультимедийного центра. Позволяет не занимать пространство обзора и максимально лаконично внедрить систему видеорегистрации в своё авто."
+    />
+    <meta property="og:url" content="" />
+</head>
+
+<body>
+    <script>
+        function dtime_nums(d) {
+            let now = new Date();
+            now.setDate(now.getDate() + d);
+            let mm = now.getMonth() + 1;
+            let day = now.getDate();
+            if (now.getDate() < 10) day = '0' + now.getDate();
+            if (mm < 10) mm = '0' + mm;
+            document.write(day + "." + mm + "." + now.getFullYear());
+        }
+    </script>
+    <!--wrap-->
+    <div class="wrap">
+        <!--header-->
+        <header class="header">
+            <img src="{{files}}/img/logo.png" alt="" class="header__logo">
+            <a href="#order_form" class="header__btn scroll">заказать в 1 клик ↓</a>
+        </header>
+        <!--/header-->
+        <!--top-menu-->
+        <div class="top-menu">
+            <ul class="top-menu__list">
+                <li class="top-menu__item">
+                    <a href="#video" class="top-menu__link scroll">Видеообзор</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#reviews" class="top-menu__link scroll">Отзывы</a>
+                </li>
+                <li class="top-menu__item">
+                    <a href="#order-steps" class="top-menu__link scroll">Доставка</a>
+                </li>
+            </ul>
+        </div>
+        <!--/top-menu-->
+        <!--offer-v1-->
+        <div class="offer-v1">
+            <div class="offer-v1__title"><b>Многофункциональное зеркало-бортовой компьютер</b> + камера заднего вида</div>
+            <div class="offer-v1__subtitle">
+                <p>Ваш главный<br> помощник на дороге</p>
+            </div>
+            <!--bullet-->
+            <ul class="bullet">
+                <li class="bullet__item">
+                    <div class="bullet__label">Компьютер</div>
+                    <div class="bullet__text">4-х ядерный CPU<br> 7.0" IPS дисплей</div>
+                </li>
+                <li class="bullet__item">
+                    <div class="bullet__label">Видеорегистратор</div>
+                    <div class="bullet__text">Съемка в Full HD<br> обзор 170°</div>
+                </li>
+                <li class="bullet__item">
+                    <div class="bullet__label">GPS-навигация</div>
+                    <div class="bullet__text">Navitel карты<br> Яндекс Навигатор</div>
+                </li>
+                <li class="bullet__item">
+                    <div class="bullet__label">G-sensor</div>
+                    <div class="bullet__text">Автоматическая<br> запись от удара</div>
+                </li>
+                <li class="bullet__item">
+                    <div class="bullet__label">Задняя камера</div>
+                    <div class="bullet__text">Легкая парковка<br> в трудных местах</div>
+                </li>
+                <li class="bullet__item">
+                    <div class="tech">
+                        <div class="tech__item">
+                            <img src="{{files}}/img/android.png" alt="">
+                            <p>Android 5.0</p>
+                        </div>
+                        <div class="tech__item">
+                            <img src="{{files}}/img/wifi.png" alt="">
+                            <p>WI-FI<br> + 3G/4G</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--/bullet-->
+        </div>
+        <!--/offer-v1-->
+        <!--promo-->
+        <div class="promo">
+            <h2 class="promo__title"><span>Супер</span> предложение!</h2>
+            <!--price-v1-->
+            <div class="price-v1">
+                <div class="price-v1__item">
+                    <div class="price-v1__label price-v1__label--old">Старая цена:</div>
+                    <div class="price-v1__value price-v1__value--old"><span><x-oldprice>3980</x-oldprice></span><i><x-currency>руб</x-currency></i>
+                    </div>
+                </div>
+                <div class="price-v1__item">
+                    <div class="price-v1__label price-v1__label--new">Цена сегодня:</div>
+                    <div class="price-v1__value price-v1__value--new"><span><x-newprice>1990</x-newprice></span><i><x-currency>руб</x-currency></i></div>
+                </div>
+            </div>
+            <div class="date_sale">
+                Акция действует с
+                <script>
+                    dtime_nums(-4)
+                </script> по
+                <script>
+                    dtime_nums(+3)
+                </script> включительно
+            </div>
+            <!--/price-v1-->
+            <!--order-form-->
+            <form class="main-order-form order-form" action="" method="post">
+                    <input name="csrf_token" type="hidden" value="e71d98fdfb1e379da0842dfa55a8d3c4:1647345345" />
+    <select name="offer" class="form-control country_chang" style="display: none;">
+                <option 
+            data-country-code="RU"
+                        selected="selected"
+                        value="25195"
+        >
+            Россия        </option>
+            </select>
+      
+                <input class="order-form__input placeholder" type="text" name="name" autocomplete="off" placeholder="Ваше имя" required="">
+                <input class="order-form__input placeholder" type="tel" name="phone" autocomplete="off" placeholder="Ваш телефон" required="">
+                <button class="button-m">Заказать со скидкой →</button>
+            </form>
+            <!--/order-form-->
+        </div>
+        <!--/promo-->
+        <!--s1-->
+        <section class="s1">
+            <h2 class="title">С помощью <b>Fugicar FC8</b> <span>вы забудете о спорных ситуациях на дороге</span></h2>
+            <div class="s1__text">
+                <p>
+                    <b>Fugicar FC8</b> — это стильный ультратонкий (толщиной всего 0,8 см) противоударный корпус + мощный высокотехнологичный и надежный компьютер с понятным русифицированным меню и регулярным обновлением + зеркало заднего вида.
+                </p>
+                <p>И все это — устройство нового поколения, предназначенное для комфортного вождения и быстрого решения любых конфликтных ситуаций на дороге.</p>
+            </div>
+            <!--benefit-->
+            <div class="benefit">
+                <!--item-->
+                <div class="benefit__item">
+                    <div class="benefit__title">
+                        <p>Видеорегистратор<br> Full HD камерой</p>
+                    </div>
+                    <div class="benefit__desc">
+                        <p>Высокое качество изображения, даже ночью. Можно легко рассмотреть номер автомобиля</p>
+                        <img src="{{files}}/img/benefit-im1.jpg" alt="" class="benefit__image">
+                        <div class="benefit__quote">
+                            Основная камера: Full HD 1080 px | 170°<br> Камера заднего вида: 640 x 480 px | 140°
+                        </div>
+                    </div>
+                </div>
+                <!--/item-->
+                <!--item-->
+                <div class="benefit__item">
+                    <div class="benefit__title">G-sensor<br> датчик удара</div>
+                    <div class="benefit__desc">
+                        <p>При малейшем ударе или попытке вскрытия автомобиля, в устройстве срабатывает датчик и моментально начинает запись происходящего</p>
+                        <img src="{{files}}/img/benefit-im2.jpg" alt="" class="benefit__image">
+                        <div class="benefit__quote">Записанные данные автоматически сохраняются в облако хранения, таким образом видео защищается от случайной перезаписи</div>
+                    </div>
+                </div>
+                <!--/item-->
+                <!--item-->
+                <div class="benefit__item">
+                    <div class="benefit__title">Парковочная камера заднего вида</div>
+                    <div class="benefit__desc">
+                        <p>Поможет быстро припарковаться и предупредит о наличии препятствия при вождении задним ходом</p>
+                        <img src="{{files}}/img/benefit-im3.jpg" alt="" class="benefit__image">
+                        <div class="benefit__quote">Четкая картинка позволит комфортно парковаться даже в неудобных местах</div>
+                    </div>
+                </div>
+                <!--/item-->
+                <!--item-->
+                <div class="benefit__item">
+                    <div class="benefit__title">Управление через меню ОС Android</div>
+                    <div class="benefit__desc">
+                        <p>Интуитивно понятное меню с доступом ко всем доступным приложениям и сервисам Google Play</p>
+                        <img src="{{files}}/img/benefit-im4.jpg" alt="" class="benefit__image">
+                        <div class="benefit__quote">Полная русификация, как у классического смартфона с удобной навигацией для поиска нужной функции</div>
+                    </div>
+                </div>
+                <!--/item-->
+                <!--item-->
+                <div class="benefit__item">
+                    <div class="benefit__title">Интернет 4G и Wi-fi</div>
+                    <div class="benefit__desc">
+                        <p>Слушайте любимую музыку, смотрите фильмы, общайтесь в социальных сетях, пользуйтесь приложениями</p>
+                        <img src="{{files}}/img/benefit-im5.jpg" alt="" class="benefit__image">
+                        <div class="benefit__quote">Fugicar настраивается как точка доступа, самостоятельно раздавая интернет пассажирам авто</div>
+                    </div>
+                </div>
+                <!--/item-->
+            </div>
+            <!--/benefit-->
+        </section>
+        <!--/s1-->
+        <!--promo-v2-->
+        <div class="promo-v2">
+            <h2 class="promo-v2__title"><span>Акция</span> супер скидка!</h2>
+            <!--price-v2-->
+            <div class="price-v2">
+                <div class="price-v2__old"><span><x-oldprice>3980</x-oldprice></span><i><x-currency>руб</x-currency></i></div>
+                <div class="price-v2__new">
+                    <div class="price-v2__label">Цена<br> сегодня:</div>
+                    <div class="price-v2__new-value"><span><x-newprice>1990</x-newprice></span><i><x-currency>руб</x-currency></i></div>
+                </div>
+            </div>
+            <div class="date_sale">
+                Акция действует с
+                <script>
+                    dtime_nums(-4)
+                </script> по
+                <script>
+                    dtime_nums(+3)
+                </script> включительно
+            </div>
+            <!--/price-v2-->
+            <a href="#order_form" class="button-m scroll">Заказать со скидкой →</a>
+            <div class="alert-warning">
+                <strong>Внимание!</strong>
+                <p>Количество товара по акции ограничено!</p>
+            </div>
+        </div>
+        <!--/promo-v2-->
+        <!--s2-->
+        <section class="s2">
+            <h2 class="title">Умное зеркало <b>Fugicar FC8</b> <span>Больше преимуществ</span></h2>
+            <div class="benefit-v2">
+                <div class="benefit-v2__item">
+                    <img src="{{files}}/img/benefit-v2-im1.jpg" alt="" class="benefit-v2__image">
+                    <div class="benefit-v2__title">Наличие внешнего модуля связи GPS</div>
+                    <div class="benefit-v2__text">Позволяет регистратору лучше поддерживать сигнал со спутниками. Антенна не зависит от самого прибора, а передача осуществляется по коаксиальному кабелю</div>
+                </div>
+                <div class="benefit-v2__item">
+                    <img src="{{files}}/img/benefit-v2-im2.jpg" alt="" class="benefit-v2__image">
+                    <div class="benefit-v2__title">Повышенная насыщенность картинки</div>
+                    <div class="benefit-v2__text">Многолинзовая оптика усиливает поток света. Различимы цифры на номерах и небольшие детали без боковых искажений</div>
+                </div>
+                <div class="benefit-v2__item">
+                    <img src="{{files}}/img/benefit-v2-im3.jpg" alt="" class="benefit-v2__image">
+                    <div class="benefit-v2__title">Удобное крепление</div>
+                    <div class="benefit-v2__text">Устанавливается на штатное зеркало с помощью резиновых креплений, длина которых регулируется в соответствии с шириной зеркала</div>
+                </div>
+                <div class="benefit-v2__item">
+                    <img src="{{files}}/img/benefit-v2-im4.jpg" alt="" class="benefit-v2__image">
+                    <div class="benefit-v2__title">Громкая связь при звонке</div>
+                    <div class="benefit-v2__text">Позволяет принимать входящий звонок с передачей аудио на штатную звуковую систему машины</div>
+                </div>
+            </div>
+            <a href="#order_form" class="button-m scroll">Заказать Fugicar FC8 →</a>
+        </section>
+        <!--/s2-->
+        <!--char-->
+        <section class="char">
+            <h3 class="title">Технические<br> характеристики</h3>
+            <ul class="char__list">
+                <li class="char__item"><span>Дисплей:</span> 7.0 " IPS, сенсорный экран</li>
+                <li class="char__item"><span>Основная камера:</span> Full HD 1080 px | 170°</li>
+                <li class="char__item"><span>Камера заднего вида:</span> 640 x 480 px | 140°</li>
+                <li class="char__item"><span>Совместная запись:</span> да</li>
+                <li class="char__item"><span>Циклическая запись:</span> да</li>
+                <li class="char__item"><span>Операционная система:</span> Android 5.0</li>
+                <li class="char__item"><span>Система навигации:</span> GPS</li>
+                <li class="char__item"><span>Сеть и коммуникации:</span> 3G, 4G, Wi-Fi, Bluetooth</li>
+                <li class="char__item"><span>Микрофон:</span> да</li>
+                <li class="char__item"><span>G-sensor:</span> да</li>
+                <li class="char__item"><span>Оперативная память:</span> 1 Гб</li>
+                <li class="char__item"><span>Накопительная память:</span> 16 Гб</li>
+                <li class="char__item"><span>Поддержка карты памяти:</span> microSD, 32 ГБ</li>
+            </ul>
+        </section>
+        <!--/char-->
+        <!--photo-->
+        <section class="photo">
+            <h3 class="title">Комплектация</h3>
+            <img src="{{files}}/img/s3-im.jpg" alt="" class="photo__image photo__image--1">
+            <h3 class="title">Качество съемки</h3>
+            <img src="{{files}}/img/s3-im2.jpg" alt="" class="photo__image photo__image--2">
+            <a href="#order_form" class="button-m scroll">Заказать со скидкой →</a>
+        </section>
+        <!--/photo-->
+        <!--video-->
+        <div class="video" id="video">
+            <h2 class="title title--blue">FuGicar FC8 <span>видеообзор</span></h2>
+            <div class="video-container">
+                <div class="youtube" id="Ewz3F16KVV0"></div>
+            </div>
+        </div>
+        <!--/video-->
+        <!--reviews-->
+        <div class="reviews" id="reviews">
+            <h2 class="title title--blue">FuGicar FC8 <span>Отзывы</span></h2>
+            <div class="reviews__list">
+                <!--item-->
+                <div class="reviews__item">
+                    <div class="reviews__title">«Отличная качественная картинка днем и ночью»</div>
+                    <img src="{{files}}/img/rev1.jpg" alt="" class="reviews__image">
+                    <div class="reviews__text">Зеркало-компьютер доставили через 4 дня после заказа, все в полном комплекте. Уже успел попользоваться, всем доволен и особенно хочу отметить отличный угол обзора, когда на записи видна даже обочина. Стабильная съемка днем и ночью
+                        – идеальная качественная картинка позволяет разглядеть гос номера других участников движения.</div>
+                    <div class="reviews__author">
+                        <img src="{{files}}/img/ava1.jpg" alt="" class="reviews__avatar">
+                        <span>Владимир, г. Москва</span>
+                    </div>
+                </div>
+                <!--/item-->
+                <!--item-->
+                <div class="reviews__item">
+                    <div class="reviews__title">«Элементарно сориентироваться и найти нужную опцию»</div>
+                    <img src="{{files}}/img/rev2.jpg" alt="" class="reviews__image">
+                    <div class="reviews__text">Главное меню русифицированное. Напоминает классический смартфон на ОС Android. Поэтому элементарно сориентироваться среди пунктов меню и найти нужную опцию. Качественно сделан, заказал отцу такой же, советую к покупке!</div>
+                    <div class="reviews__author">
+                        <img src="{{files}}/img/ava2.jpg" alt="" class="reviews__avatar">
+                        <span>Михаил, г. Нижний Новгород</span>
+                    </div>
+                </div>
+                <!--/item-->
+                <!--item-->
+                <div class="reviews__item">
+                    <div class="reviews__title">«Доволен переходом на этот рекордер»</div>
+                    <img src="{{files}}/img/rev3.jpg" alt="" class="reviews__image">
+                    <div class="reviews__text">До покупки этой модели пользовался стандартным регистратором и планшетом. Доволен переходом на этот рекордер. В одном корпусе уместилось множество функций. Быстрая установка, оптика на уровне.</div>
+                    <div class="reviews__author">
+                        <img src="{{files}}/img/ava3.jpg" alt="" class="reviews__avatar">
+                        <span>Алексей, г. Москва</span>
+                    </div>
+                </div>
+                <!--/item-->
+            </div>
+        </div>
+        <!--/reviews-->
+        <!--order-steps-->
+        <div class="order-steps" id="order-steps">
+            <h2 class="title title--white">Fugicar FC8 <span>как заказать</span> в 3 шага</h2>
+            <div class="order-steps__list">
+                <div class="order-steps__item">
+                    <div class="order-steps__photo">
+                        <a href="#order_form" class="order-steps__btn scroll">Заказать →</a>
+                    </div>
+                    <div class="order-steps__text">Оставьте заявку<br> на нашем сайте</div>
+                </div>
+                <div class="order-steps__item">
+                    <div class="order-steps__photo">
+                        <img src="{{files}}/img/order-steps-im1.jpg" alt="" class="order-steps__image">
+                    </div>
+                    <div class="order-steps__text">Вам перезвонит наш менеджер, ответит на все вопросы и оформит заказ</div>
+                </div>
+                <div class="order-steps__item">
+                    <div class="order-steps__photo">
+                        <img src="{{files}}/img/order-steps-im2.jpg" alt="" class="order-steps__image">
+                    </div>
+                    <div class="order-steps__text">Доставим через 3-10 дней (в зависимости от региона) без предоплаты. Оплачиваете заказ при получении на почте</div>
+                </div>
+            </div>
+        </div>
+        <!--/order-steps-->
+        <!--offer-v2-->
+        <div class="offer-v2">
+            <div class="offer-v2__logo">
+                <img src="{{files}}/img/logo2.png" alt="">
+            </div>
+            <div class="offer-v2__box">
+                <div class="offer-v2__title"><b>Многофункциональное зеркало-бортовой компьютер</b> + камера заднего вида</div>
+                <div class="offer-v2__subtitle">
+                    <p>Ваш главный<br> помощник на дороге</p>
+                </div>
+            </div>
+            <div class="offer-v2__order">
+                <!--price-v2-->
+                <div class="price-v2">
+                    <div class="price-v2__old"><span><x-oldprice>3980</x-oldprice></span><i><x-currency>руб</x-currency></i></div>
+                    <div class="price-v2__new">
+                        <div class="price-v2__label">Цена<br> сегодня:</div>
+                        <div class="price-v2__new-value"><span><x-newprice>1990</x-newprice></span><i><x-currency>руб</x-currency></i></div>
+                    </div>
+                </div>
+                <div class="date_sale">
+                    Акция действует с
+                    <script>
+                        dtime_nums(-4)
+                    </script> по
+                    <script>
+                        dtime_nums(+3)
+                    </script> включительно
+                </div>
+                <!--/price-v2-->
+                <!--order-form-->
+                <form class="main-order-form order-form" id="order_form" action="" method="post">
+                    <div class="order-form__head">
+                        <div class="order-form__title">Для заказа со скидкой<br> оставьте заявку</div>
+                        <div class="order-form__text">
+                            <p>Наш оператор свяжется с вами в ближайшее время для уточнения деталей заказа</p>
+                            <p class="white-color">Звонок бесплатный!</p>
+                        </div>
+                    </div>
+                        <input name="csrf_token" type="hidden" value="e71d98fdfb1e379da0842dfa55a8d3c4:1647345345" />
+    <select name="offer" class="form-control country_chang" style="display: none;">
+                <option 
+            data-country-code="RU"
+                        selected="selected"
+                        value="25195"
+        >
+            Россия        </option>
+            </select>
+      
+                    <input class="order-form__input placeholder" type="text" name="name" autocomplete="off" placeholder="Ваше имя" required="">
+                    <input class="order-form__input placeholder" type="tel" name="phone" autocomplete="off" placeholder="Ваш телефон" required="">
+                    <button class="button-m">Заказать со скидкой →</button>
+                    
+                </form>
+                <!--/order-form-->
+            </div>
+        </div>
+        <!--/offer-v2-->
+        <!--footer-->
+        <footer class="footer">
+            <div class="foot_ru_center" style="text-align: center; margin: 0px auto; padding: 30px 0; font-size:15px">
+              <p>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТРЕЙД" ОГРН: 1221800003512 ИНН: 1840109975 КПП: 184001001 e-mail: trade@mail.ru skype: trade2022</p>
+<p>426075, УДМУРТСКАЯ РЕСПУБЛИКА, ГОРОДСКОЙ ОКРУГ ГОРОД ИЖЕВСК, Г ИЖЕВСК, УЛ СОЮЗНАЯ, Д. 29, КВ. 23</p> 
+
+  
+    
+    
+            <p class="conf-link doclinks">
+        <a class="nav-link"  href="" onclick="window.open('/policy2.php'); return false;">Политика конфиденциальности </a>
+      </p>
+      
+<!--       <p class="policy-link doclinks"> -->
+<!--         <a class="nav-link"  href="" onclick="window.open('/policy2.php'); return false;">Условия оформления заказа</a> -->
+<!--       </p> -->
+
+    
+            </div>
+        </footer>
+        <!--/footer-->
+    </div>
+    <!--/wrap-->
+  <style type="text/css">
+    .form-control{
+      text-align-last: center;
+    display: block;
+    width: 100%;
+    height: 76px;
+    background: #fff;
+    border: none;
+    border-radius: 36px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+  </style>
+    <script src="{{files}}/js/previewYouTube.js"></script>
+    <script src="{{files}}/js/init.js"></script>
+</body>
+
+</html>
