@@ -707,7 +707,7 @@ section {
   bottom: 100%;
   position: absolute;
   width: 30%;
-  transition: 4s ease-in-out;
+  transition: 3.5s ease-in-out;
 }
 
 .bg-hand.active {
@@ -948,6 +948,26 @@ section {
   background-image: url(../images/mir-pola_bg.jpg);
 }
 
+.project__item5-title {
+  background-image: url(../images/bitdice_bg.jpg);
+}
+
+.project__item6-title {
+  background-image: url(../images/helix_bg.jpg);
+}
+
+.project__item7-title {
+  background-image: url(../images/mostbet_bg.jpg);
+}
+
+.project__item8-title {
+  background-image: url(../images/tennisi_bg.jpg);
+}
+
+.project__item9-title {
+  background-image: url(../images/apple_bg.jpg);
+}
+
 .container-projects-title {
   align-items: flex-start;
   flex-direction: column;
@@ -1044,6 +1064,20 @@ section {
   background: radial-gradient(ellipse at center, #b1c6db 2%, #053f76 100%);
   border-radius: 100%;
   animation: infinite alternate shine;
+}
+
+.project__two-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    width: auto;
+
+    &:nth-child(odd) {
+      margin-right: 40px;
+    }
+  }
 }
 
 @keyframes shine {
