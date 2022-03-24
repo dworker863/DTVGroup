@@ -488,6 +488,10 @@
   .btn-feedback {
     transform: translate(22.5%, 50%);
   }
+  .projects__project {
+    margin-bottom: 40px;
+  }
+
   .projects-desc {
     margin-top: -60px;
     padding: 0 30px 30px;
@@ -633,13 +637,21 @@
   .projects {
     padding-bottom: 0;
   }
+
+  .projects__project {
+    margin-bottom: 0px;
+  }
   .projects-title {
     margin-bottom: 0;
-  }
-  .projects__title {
     padding-left: 30px;
   }
+
+  .projects__item-logo {
+    margin-left: 20px;
+  }
+
   .projects__tagline {
+    margin-left: 20px;
     padding-top: 10px;
     font-size: 20px;
   }

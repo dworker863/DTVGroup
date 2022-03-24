@@ -912,7 +912,7 @@ section {
 }
 
 .projects__project {
-  overflow: hidden;
+  margin-bottom: 80px;
 }
 
 .projects-title {
@@ -1004,7 +1004,7 @@ section {
   padding-left: 20px;
   font-size: 60px;
   font-weight: 800;
-  line-height: 40px;
+  line-height: 47px;
   background-color: #fff;
 }
 
@@ -1035,6 +1035,10 @@ section {
   font-size: 30px;
   font-weight: 800;
   line-height: 24px;
+}
+
+.projects__item-title {
+  margin-top: 0;
 }
 
 .projects__product-title {
