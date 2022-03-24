@@ -89,6 +89,15 @@
   .projects__stroy {
     height: 500px;
   }
+
+  .project__apple {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .container-projects .apple-video {
+    width: 620px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -202,6 +211,14 @@
   }
   .projects__stroy {
     height: 400px;
+  }
+
+  .project__two-items img:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .project__two-items {
+    gap: 20px;
   }
 }
 
@@ -405,6 +422,11 @@
   .projects__stroy:nth-child(5) {
     flex-direction: column-reverse;
   }
+  .project-bet {
+    img {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -479,6 +501,11 @@
   }
   .project__item2-title {
     background-position: 30% 0;
+  }
+  .project__apple {
+    img {
+      width: 48%;
+    }
   }
 }
 
@@ -660,6 +687,18 @@
   }
   .projects__item-desc {
     margin: 0 auto 20px;
+    width: 320px;
+  }
+
+  .project__apple {
+    justify-content: center;
+
+    img {
+      width: 320px;
+    }
+  }
+
+  .container-projects .apple-video {
     width: 320px;
   }
 }

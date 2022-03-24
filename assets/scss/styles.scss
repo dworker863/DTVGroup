@@ -910,6 +910,10 @@ section {
   height: 100vh;
 }
 
+.projects__project {
+  overflow: hidden;
+}
+
 .projects-title {
   font-family: 'JetBrains Mono', sans-serif;
   padding-left: 130px;
@@ -1097,8 +1101,13 @@ section {
 .project__apple {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   gap: 10px;
+
+  img {
+    width: 300px;
+  }
 }
 
 @keyframes shine {
