@@ -979,9 +979,17 @@ section {
   flex-wrap: wrap;
 }
 
-.container-projects img {
-  width: 100%;
-  margin-bottom: 40px;
+.container-projects {
+  img,
+  video {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .apple-video {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .projects__item-square {
@@ -1080,7 +1088,7 @@ section {
   }
 }
 
-.project-bitdice {
+.project-bet {
   img {
     width: 45%;
   }
