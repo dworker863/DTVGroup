@@ -233,7 +233,7 @@ section {
   z-index: 3000;
   cursor: pointer;
   position: fixed;
-  top: 50px;
+  top: 44px;
   right: 40px;
   display: none;
 }
@@ -911,7 +911,7 @@ section {
 }
 
 .projects__project {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .projects-title {
@@ -923,6 +923,7 @@ section {
 .projects-desc {
   opacity: 1;
   padding-top: 0;
+  padding-left: 130px;
   color: #fff;
   font-weight: 300;
 }
